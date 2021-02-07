@@ -10,7 +10,7 @@ const colours = require("./colours.json");
     humanizeDuration = require('humanize-duration'),
     cooldown = new Set()
  
-client.login(config.token)
+client.login(process.env.TOKEN)
 client.commands = new Discord.Collection()
 client.db = require('./db.json')
  
