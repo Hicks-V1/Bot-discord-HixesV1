@@ -10,7 +10,7 @@ module.exports = {
         client.db.lockedChannels.splice(client.db.lockedChannels.indexOf(channel.id), 1)
         fs.writeFileSync('./db.json', JSON.stringify(client.db))
         message.channel.send('Ce salon a été déverrouillé !')
-        message.guild.channels.cache.get(config.logs).send(new Discord.MessageEmbed()
+        message.guild.channels.cache.get(config.logs).send(new Discord.MessageEmbed
             .setAuthor(`[UNLOCK] ${channel.name}`)
             .addField('Salon', channel, true)
             .addField('Modérateur', message.author, true))
