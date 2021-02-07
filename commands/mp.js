@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
+    config = require('../config.json')
 
-exports.run = (client, message, args) => {
+module.exports = {
+    run: async (message, args) => {
     if(!message.member.hasPermission("ADMINISTRATOR")) {
         var error_permissions = new Discord.RichEmbed()
             .setDescription("<:false:551460099600678944> Vous ne disposez pas les permissions nécessaires pour effectuer cette commande.")
@@ -18,6 +20,5 @@ exports.run = (client, message, args) => {
         message.delete();
     }
 }
-module.exports.help = {
-    name: "mp"
+
 }
